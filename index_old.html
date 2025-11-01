@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TheSoulGarden - Demo</title>
+
+  <!-- NOTE (demo only): Using CDN + in-browser Babel is fragile. For production build, compile with Vite/webpack and bundle Tailwind. -->
+  <script async src="https://unpkg.com/es-module-shims@1.10.0/dist/es-module-shims.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://esm.sh/react@18.2.0",
+      "react-dom": "https://esm.sh/react-dom@18.2.0",
+      "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+      "react-router-dom": "https://esm.sh/react-router-dom@6.14.1",
+      "recharts": "https://esm.sh/recharts@3.3.0"
+    }
+  }
+  </script>
+
+  <!-- Tailwind CDN is OK for demos but not production -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <div id="root"></div>
+
+  <!--
+    Demo entry: runtime compile TSX/JSX in the browser.
+    - Ensure index.tsx exists at the site root (deployed path /index.tsx).
+    - Also ensure your local relative imports include file extensions (e.g. './App.tsx').
+    - This is only for quick testing — precompile for any real deployment.
+  -->
+  <script type="text/babel" data-presets="react,typescript" data-type="module" src="index.tsx"></script>
+</body>
+</html>
