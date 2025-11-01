@@ -1,8 +1,11 @@
 import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
-import { PublicLayout, AdminLayout } from './components/Layouts';
-import { HomePage, VenuePage, PortfolioPage, BookingPage, EventsPage, ContactPage } from './pages/PublicPages';
-import { DashboardPage, CalendarPage, BookingsPage, EventRegistrationsPage, FinancialsPage } from './pages/AdminPages';
+// Was: import { PublicLayout, AdminLayout } from './components/Layouts';
+import { PublicLayout, AdminLayout } from './components/Layouts.tsx';
+// Was: import { HomePage, VenuePage, PortfolioPage, BookingPage, EventsPage, ContactPage } from './pages/PublicPages';
+import { HomePage, VenuePage, PortfolioPage, BookingPage, EventsPage, ContactPage } from './pages/PublicPages.tsx';
+// Was: import { DashboardPage, CalendarPage, BookingsPage, EventRegistrationsPage, FinancialsPage } from './pages/AdminPages';
+import { DashboardPage, CalendarPage, BookingsPage, EventRegistrationsPage, FinancialsPage } from './pages/AdminPages.tsx';
 
 const App: React.FC = () => {
     return (
